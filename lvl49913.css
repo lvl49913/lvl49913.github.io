@@ -1,5 +1,12 @@
 :root {
-	--pink-gradient: linear-gradient(to bottom, #ffe6ef 0%, #ffc2de 9%, #ff9ec0 18%, #ff70a3 92%, #cc5684 100%) center/cover no-repeat;
+	--pink-gradient: linear-gradient(
+		to bottom,
+		#fff0f7 0%,
+		#ffd6e8 10%,
+		#ffb3d8 25%,
+		#ff99c2 85%,
+		#e87aa8 100%
+	) center/cover no-repeat;
 }
 
 body {
@@ -28,28 +35,30 @@ body:before {
 
 @keyframes yourAnimation {
 	0.0% { opacity: 1; }
-	75% { opacity: 1; }
+	75%  { opacity: 1; }
 	100% { opacity: 0; }
 }
 
 nav, footer {
 	margin: 1em;
 	position: relative;
-	box-shadow: 5px 8px 10px #0006;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
 }
 
 footer {
 	margin-bottom: 3rem;
-	border: 2px solid #ff9ec0;
+	border: 2px solid #ffb3d8;
 }
 
-nav .top, nav .links, nav .info, nav .links {
-	border-left: 2px solid #ff9ec0;
-	border-right: 2px solid #ff9ec0;
+nav .top,
+nav .links,
+nav .info {
+	border-left: 2px solid #ffb3d8;
+	border-right: 2px solid #ffb3d8;
 }
 
 nav .links {
-	border-bottom: 2px solid #ff9ec0;
+	border-bottom: 2px solid #ffb3d8;
 }
 
 nav:before {
@@ -70,7 +79,12 @@ nav:after {
 	padding: .4em .6em;
 	width: fit-content;
 	border-radius: 5px;
-	background: linear-gradient(180deg, #ffc2de 0%, #ff9ec0 29%, #ff70a3 100%);
+	background: linear-gradient(
+		180deg,
+		#fff0f7 0%,
+		#ffd6e8 29%,
+		#e87aa8 100%
+	);
 	border: 1px solid #FFF;
 	position: absolute;
 	top: 0;
@@ -96,7 +110,7 @@ main {
 }
 
 .profile h1 {
-	border: 2px solid #ff9ec0;
+	border: 2px solid #ffb3d8;
 	border-radius: 5px 5px 0 0;
 	padding: .5em;
 	color: #FFF;
@@ -113,11 +127,11 @@ main {
 
 .profile .general-about {
 	background: #FFF;
-	border-left: 2px solid #ff9ec0;
-	border-right: 2px solid #ff9ec0;
-	border-bottom: 2px solid #ff9ec0;
+	border-left: 2px solid #ffb3d8;
+	border-right: 2px solid #ffb3d8;
+	border-bottom: 2px solid #ffb3d8;
 	padding: 1em;
-	box-shadow: 5px 8px 10px #0006;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
 }
 
 .general-about .profile-pic {
@@ -128,10 +142,10 @@ main {
 	margin-top: 1em;
 	background: #FFF;
 	border-radius: 11px 11px 0 0;
-	box-shadow: 5px 8px 10px #0006;
-	border-left: 2px solid #ff9ec0;
-	border-right: 2px solid #ff9ec0;
-	border-bottom: 2px solid #ff9ec0;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
+	border-left: 2px solid #ffb3d8;
+	border-right: 2px solid #ffb3d8;
+	border-bottom: 2px solid #ffb3d8;
 }
 
 .profile .left .mood p {
@@ -144,9 +158,9 @@ main {
 	content: "🙂 Mood";
 	display: block;
 	padding: .5em;
-	border: 2px solid #ff9ec0;
+	border: 2px solid #ffb3d8;
 	background: var(--pink-gradient);
-	font-family: "Trebuchet MS", Tahoma, sans-serif;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 1em;
 	text-shadow: 2px 2px 0px #000;
 	border-radius: 10px 10px 0 0;
@@ -161,16 +175,24 @@ main {
 	margin: 0;
 	padding: 0;
 	z-index: 10;
+	background: linear-gradient(
+		180deg,
+		#ffd6e8,
+		#ffb3d8 8%,
+		#ff99c2 40%,
+		#ff99c2 88%,
+		#e87aa8
+	);
 	border: 0;
-	background: linear-gradient(180deg, #ffc2de, #ff9ec0 8%, #ff70a3 40%, #ff70a3 88%, #cc5684);
 }
 
 .profile .contact .heading {
-	background: radial-gradient(circle, #f9bedb 0%, #ff9ec0 100%) center/cover no-repeat;
+	background: radial-gradient(circle, #fff0f7 0%, #ffd6e8 100%) center/cover no-repeat;
 	display: flex;
 	border-radius: 0 40px 50px 0;
 	align-items: center;
-	box-shadow: -2px -2px 10px rgba(0,0,0,.25) inset, 2px 2px 10px rgba(0,0,0,0.5) inset;
+	box-shadow: -2px -2px 10px rgba(0,0,0,0.25) inset,
+				2px 2px 10px rgba(0,0,0,0.5) inset;
 	margin-right: .5em;
 }
 
@@ -184,7 +206,7 @@ main {
 	font-family: sans-serif;
 	font-weight: bold;
 	font-style: italic;
-	text-shadow: 2px 2px 5px #0007;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 	padding-right: 1.2rem;
 	white-space: nowrap;
 }
@@ -193,7 +215,9 @@ main {
 	overflow-y: scroll;
 }
 
-.profile .contact .inner, .profile .contact .inner .f-row, .profile .contact .inner .f-row .f-col {
+.profile .contact .inner,
+.profile .contact .inner .f-row,
+.profile .contact .inner .f-row .f-col {
 	display: flex;
 	margin: 0;
 	align-items: center;
@@ -201,8 +225,13 @@ main {
 
 .profile .f-col a {
 	white-space: nowrap;
-	border: 1px solid #cc5684;
-	background: linear-gradient(180deg, #ffc2de, #ff9ec0 86%, #ff70a3);
+	border: 1px solid #e87aa8;
+	background: linear-gradient(
+		180deg,
+		#ffd6e8,
+		#ffb3d8 86%,
+		#ff99c2
+	);
 	border-radius: 3px;
 	padding: .5em;
 	margin-left: .3em;
@@ -211,14 +240,22 @@ main {
 }
 
 .profile .f-col a:hover {
-	background: linear-gradient(180deg, #ff70a3, #ff9ec0 86%, #ff70a3);
+	background: linear-gradient(
+		180deg,
+		#ff99c2,
+		#ffb3d8 86%,
+		#ff99c2
+	);
 	text-decoration: none;
 }
 
-.profile .url-info, .profile .profile-info {
+.profile .url-info,
+.profile .profile-info {
 	background-color: #E7E5CF;
 	border: 0;
-	box-shadow: 2px 2px 0px #FFFFFF inset, -2px -2px 0px #5D5C51 inset, 5px 8px 10px #0006;
+	box-shadow: 2px 2px 0px #FFFFFF inset,
+				-2px -2px 0px #5D5C51 inset,
+				5px 8px 10px rgba(0,0,0,0.4);
 	padding: 10px;
 }
 
@@ -228,8 +265,8 @@ main {
 
 .left .table-section {
 	border-radius: 10px 10px 0 0;
-	border: 2px solid #ff9ec0;
-	box-shadow: 5px 8px 10px #0006;
+	border: 2px solid #ffb3d8;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
 }
 
 .left .table-section .details-table tr {
@@ -239,15 +276,18 @@ main {
 
 .left .table-section .heading {
 	background: var(--pink-gradient);
+	border: 2px solid #ffb3d8;
 	padding: 1em;
-	font-family: "Trebuchet MS", Tahoma, sans-serif;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 1em;
 	text-shadow: 2px 2px 0px #000;
 	border-radius: 10px 10px 0 0;
 	color: #FFF;
 }
 
-.left .table-section .inner, .left .table-section .details-table td, .left .table-section .details-table td:first-child {
+.left .table-section .inner,
+.left .table-section .details-table td,
+.left .table-section .details-table td:first-child {
 	width: 100%;
 	background: #E7E4CF;
 }
@@ -295,10 +335,10 @@ main {
 	margin-top: 1em;
 	background: #FFF;
 	border-radius: 11px 11px 0 0;
-	box-shadow: 5px 8px 10px #0006;
-	border-left: 3px solid #ff9ec0;
-	border-right: 2px solid #ff9ec0;
-	border-bottom: 2px solid #ff9ec0;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
+	border-left: 3px solid #ffb3d8;
+	border-right: 2px solid #ffb3d8;
+	border-bottom: 2px solid #ffb3d8;
 }
 
 .profile .right .blog-preview p,
@@ -309,12 +349,12 @@ main {
 }
 
 .profile .right .blog-preview:before {
-	background: var(--pink-gradient);
 	content: "📓 Notepad";
 	display: block;
 	padding: .5em;
-	border: 2px solid #ff9ec0;
-	font-family: "Trebuchet MS", Tahoma, sans-serif;
+	background: var(--pink-gradient);
+	border: 2px solid #ffb3d8;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 1em;
 	text-shadow: 2px 2px 0px #000;
 	border-radius: 10px 10px 0 0;
@@ -326,19 +366,19 @@ main {
 	margin-top: 1em;
 	background: #FFF;
 	border-radius: 11px 11px 0 0;
-	box-shadow: 5px 8px 10px #0006;
-	border-left: 3px solid #ff9ec0;
-	border-right: 2px solid #ff9ec0;
-	border-bottom: 2px solid #ff9ec0;
+	box-shadow: 5px 8px 10px rgba(0,0,0,0.4);
+	border-left: 3px solid #ffb3d8;
+	border-right: 2px solid #ffb3d8;
+	border-bottom: 2px solid #ffb3d8;
 }
 
 .profile .right .blurbs .heading,
 .profile .right .friends .heading {
 	background: var(--pink-gradient);
+	border: 2px solid #ffb3d8;
 	display: block;
 	padding: .7em;
-	border: 2px solid #ff9ec0;
-	font-family: "Trebuchet MS", Tahoma, sans-serif;
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 	font-size: 1em;
 	text-shadow: 2px 2px 0px #000;
 	border-radius: 10px 10px 0 0;
