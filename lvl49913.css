@@ -347,70 +347,42 @@ nav:after {
 	border: 0;
 	border-left: 5px solid #ffbd2e;
 }
-
+/* CD Styling */
 .cd-shelf {
   display: flex;
-  gap: 2rem;
   justify-content: center;
-  margin: 2rem auto;
+  gap: 2rem;
+  margin: 1rem auto;
 }
-
-.cd-wrapper {
-  position: relative;
+.cd-thumb {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   border: 2px solid #ffc9da;
-  overflow: hidden;
-  cursor: pointer;
   transition: transform 0.3s ease;
 }
-
-.cd-wrapper img {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
+.cd-thumb:hover {
+  transform: scale(1.2) rotate(360deg);
 }
 
-.cd-still {
-  z-index: 1;
-  opacity: 1;
-}
-.cd-spin {
-  z-index: 2;
-  opacity: 0;
-}
-
-/* Hover to show spin */
-.cd-wrapper:hover .cd-spin {
-  opacity: 1;
-}
-.cd-wrapper:hover .cd-still {
-  opacity: 0;
-}
-
-/* Now Playing Box */
+/* Music Player Styling (vomitgirl inspired) */
 #music {
   position: relative;
-  background: url('https://file.garden/ZRYtsnIP2EXOR4Kw/Site%20Files/musicplayer.png') no-repeat center;
+  background: url('https://file.garden/ZRYtsnIP2EXOR4Kw/Site%20Files/musicplayer.png') top left no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
   height: 50px;
   max-width: 305px;
   border: 1px solid #000000;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 #music iframe {
   position: absolute;
-  top: 0;
+  top: 0px;
   height: 47px;
   opacity: 0.0000001;
   z-index: 0;
-  left: 0;
+  left: 0px;
 }
 #music div {
   position: absolute;
