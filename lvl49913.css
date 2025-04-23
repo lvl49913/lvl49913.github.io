@@ -460,3 +460,37 @@ nav .top {
   /* …or switch to a softer radial if you prefer: */
   /* background: radial-gradient(circle at top left, #fff5fb 0%, #ffe0f2 100%) !important; */
 }
+
+/* ————— Make the nav “links” & “info” bars pink ————— */
+nav .links,
+nav .info {
+  background: var(--pink-gradient) !important;
+  border-color: #ffd1e6 !important;
+}
+
+/* ————— Keep those nav links in blue ————— */
+nav .links a {
+  color: #1E40AF !important;      /* your link-blue */
+  text-shadow: none !important;   /* remove blue glow */
+}
+
+/* ————— Also blue-ify any links in the top box ————— */
+nav .top a {
+  color: #1E40AF !important;
+}
+
+/* ————— Bottom bar buttons (Add Friend, IM, etc.) ————— */
+.profile_actions a,
+.profile_toolbar a,
+.btn {
+  color: #1E40AF !important;      /* same link-blue */
+  text-shadow: none;
+}
+
+.profile_actions a:hover,
+.profile_toolbar a:hover,
+.btn:hover {
+  /* hover background already set, we just keep the blue text */
+  color: #1E40AF !important;
+}
+
