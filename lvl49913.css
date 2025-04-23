@@ -1,11 +1,11 @@
 :root {
 	--pink-gradient: linear-gradient(
 		to bottom,
-		#fff5fb 0%,
-		#ffe0f2 10%,
-		#ffd1e6 25%,
-		#ffaad3 85%,
-		#eaa0b1 100%
+		#fffafd 0%,
+		#ffeef4 10%,
+		#ffdbe7 30%,
+		#ffc9da 80%,
+		#f3a3c1 100%
 	) center/cover no-repeat;
 }
 
