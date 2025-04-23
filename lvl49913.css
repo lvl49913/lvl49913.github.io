@@ -351,15 +351,22 @@ nav:after {
 .cd-shelf {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   margin: 2rem auto;
-  max-width: 90%;
 }
 
-.cd-link {
-  display: inline-block;
-  transition: transform 0.2s ease;
+.cd-shelf summary {
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cd-shelf summary::-webkit-details-marker {
+  display: none;
+}
+.cd-shelf summary::marker {
+  display: none;
 }
 
 .cd-thumb {
@@ -370,26 +377,22 @@ nav:after {
   transition: transform 0.3s ease;
 }
 
-.cd-link:hover .cd-thumb,
-.cd-link:focus .cd-thumb,
-.cd-thumb.clicked {
+/* Spin and enlarge only when hovered or details is open */
+details[open] .cd-thumb,
+.cd-thumb:hover {
   transform: scale(1.2);
   animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  to   { transform: rotate(360deg); }
 }
 
-/* Hide summary bullet/icon if still using <details> version */
-summary::-webkit-details-marker {
-  display: none;
-}
-summary::marker {
-  display: none;
-}
-
-.cd-audio {
-  display: none; /* toggle this ON only when a CD is “playing” */
+/* Audio styling */
+audio {
+  margin-top: 0.5rem;
+  width: 220px;
+  filter: drop-shadow(0 0 4px #ffc9da);
+  border-radius: 10px;
 }
