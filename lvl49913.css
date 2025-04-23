@@ -347,7 +347,6 @@ nav:after {
 	border: 0;
 	border-left: 5px solid #ffbd2e;
 }
-/* CD Styling */
 .cd-shelf {
   display: flex;
   justify-content: center;
@@ -365,7 +364,6 @@ nav:after {
   transform: scale(1.2) rotate(360deg);
 }
 
-/* Music Player Styling (vomitgirl inspired) */
 #music {
   position: relative;
   background: url('https://file.garden/ZRYtsnIP2EXOR4Kw/Site%20Files/musicplayer.png') top left no-repeat;
