@@ -350,19 +350,44 @@ nav:after {
 
 #music {
   position: relative;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/2048px-CD_icon_test.svg.png') center center no-repeat;
-  background-size: contain;
   overflow: hidden;
   height: 90px;
   width: 90px;
-  border: 2px solid #ffc9da;
   border-radius: 50%;
   margin: 2rem auto;
   transition: transform 0.4s ease;
+  background: transparent;
 }
 
-#music:hover {
+#music::before {
+  content: "";
+  display: block;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/2048px-CD_icon_test.svg.png') center center no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#music:hover::before {
   animation: spin-cd 1.2s linear infinite;
+}
+
+#music iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.000001;
+  border: 0;
+  z-index: 2;
+  cursor: pointer;
 }
 
 @keyframes spin-cd {
@@ -370,17 +395,3 @@ nav:after {
   to { transform: rotate(360deg); }
 }
 
-#music iframe {
-  position: absolute;
-  top: 0;
-  height: 90px;
-  width: 90px;
-  opacity: 0.00000001;
-  z-index: 0;
-  left: 0;
-  border-radius: 50%;
-}
-
-#music div {
-  display: none; /* hiding the [SONG]/[ARTIST] for now */
-}
