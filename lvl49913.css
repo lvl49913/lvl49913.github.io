@@ -446,3 +446,17 @@ main {
 .btn:hover {
 	background: #ffe0f2;
 }
+
+/* ————— Force the SpaceHey top bar pastel pink ————— */
+nav .top {
+  background: var(--pink-gradient) !important;
+  border-color: #ffd1e6 !important;
+}
+
+/* ————— Make the “start” bubble pastel pink too ————— */
+.profile .contact .heading {
+  /* you can use the same linear gradient… */
+  background: var(--pink-gradient) !important;
+  /* …or switch to a softer radial if you prefer: */
+  /* background: radial-gradient(circle at top left, #fff5fb 0%, #ffe0f2 100%) !important; */
+}
