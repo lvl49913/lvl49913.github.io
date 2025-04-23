@@ -350,49 +350,55 @@ nav:after {
 
 .cd-shelf {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 2rem auto;
 }
 
-.cd-shelf summary {
-  list-style: none;
-  cursor: pointer;
-  text-align: center;
-}
-
-.cd-shelf summary::-webkit-details-marker {
-  display: none;
-}
-.cd-shelf summary::marker {
-  display: none;
-}
-
-.cd-thumb {
+.cd-wrapper {
+  position: relative;
   width: 90px;
   height: 90px;
   border-radius: 50%;
   border: 2px solid #ffc9da;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-/* Spin and enlarge only when hovered or details is open */
-details[open] .cd-thumb,
-.cd-thumb:hover {
+/* Both images are stacked */
+.cd-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Default: only still image is shown */
+.cd-still { opacity: 1; z-index: 1; }
+.cd-spin  { opacity: 0; z-index: 2; }
+
+/* On hover or when open: show the spinning gif */
+details:hover .cd-wrapper,
+details[open] .cd-wrapper {
   transform: scale(1.2);
-  animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+details:hover .cd-spin,
+details[open] .cd-spin {
+  opacity: 1;
 }
 
-/* Audio styling */
-audio {
-  margin-top: 0.5rem;
-  width: 220px;
-  filter: drop-shadow(0 0 4px #ffc9da);
-  border-radius: 10px;
+details:hover .cd-still,
+details[open] .cd-still {
+  opacity: 0;
+}
+
+/* Clean up bullet/icon */
+.cd-shelf summary::-webkit-details-marker,
+.cd-shelf summary::marker {
+  display: none;
 }
