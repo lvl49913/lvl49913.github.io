@@ -348,17 +348,12 @@ nav:after {
 	border-left: 5px solid #ffbd2e;
 }
 
-.cd-player-group {
+.cd-shelf {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-/* Hide actual checkbox */
-.cd-toggle {
-  display: none;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem auto;
 }
 
 .cd-wrapper {
@@ -366,57 +361,39 @@ nav:after {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  overflow: hidden;
   border: 2px solid #ffc9da;
-  cursor: pointer;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-/* Both images stacked */
-.cd-still, .cd-spin {
+.cd-wrapper img {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   transition: opacity 0.3s ease;
 }
 
-.cd-spin {
-  opacity: 0;
-  z-index: 2;
-}
-.cd-still {
-  opacity: 1;
-  z-index: 1;
-}
+.cd-still { z-index: 1; opacity: 1; }
+.cd-spin  { z-index: 2; opacity: 0; }
 
-/* Hover enlarges and spins */
-.cd-wrapper:hover {
+details:hover .cd-wrapper,
+details[open] .cd-wrapper {
   transform: scale(1.2);
 }
-.cd-wrapper:hover .cd-spin {
+
+details:hover .cd-spin,
+details[open] .cd-spin {
   opacity: 1;
 }
-.cd-wrapper:hover .cd-still {
+details:hover .cd-still,
+details[open] .cd-still {
   opacity: 0;
 }
 
-/* When checkbox is checked = simulate 'clicked' */
-.cd-toggle:checked + .cd-wrapper {
-  transform: scale(1.2);
-}
-.cd-toggle:checked + .cd-wrapper .cd-spin {
-  opacity: 1;
-}
-.cd-toggle:checked + .cd-wrapper .cd-still {
-  opacity: 0;
-}
-
-/* Show audio iframe only if checked */
-.cd-toggle:checked ~ .cd1-audio {
-  display: block;
-}
-
-.cd-audio {
+summary::-webkit-details-marker,
+summary::marker {
   display: none;
 }
