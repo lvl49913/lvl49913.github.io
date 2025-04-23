@@ -357,10 +357,9 @@ nav:after {
   max-width: 90%;
 }
 
-.cd-shelf summary {
-  list-style: none;
-  cursor: pointer;
-  text-align: center;
+.cd-link {
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 .cd-thumb {
@@ -369,28 +368,28 @@ nav:after {
   border-radius: 50%;
   border: 2px solid #ffc9da;
   transition: transform 0.3s ease;
-  animation: none;
 }
 
-.cd-thumb:hover {
+.cd-link:hover .cd-thumb,
+.cd-link:focus .cd-thumb,
+.cd-thumb.clicked {
+  transform: scale(1.2);
   animation: spin 2s linear infinite;
-}
-
-.cd-shelf iframe {
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-details[open] summary::after {
-  content: "🔊";
-  display: block;
-  font-size: 12px;
-  margin-top: 0.2rem;
-  color: #999;
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* Hide summary bullet/icon if still using <details> version */
+summary::-webkit-details-marker {
+  display: none;
+}
+summary::marker {
+  display: none;
+}
+
+.cd-audio {
+  display: none; /* toggle this ON only when a CD is “playing” */
 }
