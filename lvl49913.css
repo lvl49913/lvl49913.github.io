@@ -350,8 +350,7 @@ nav:after {
 
 .cd-shelf {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   margin: 2rem auto;
 }
@@ -363,47 +362,68 @@ nav:after {
   border-radius: 50%;
   border: 2px solid #ffc9da;
   overflow: hidden;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
 .cd-wrapper img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 90px;
   height: 90px;
+  top: 0;
+  left: 0;
   object-fit: cover;
   transition: opacity 0.3s ease;
 }
 
-.cd-still { z-index: 1; opacity: 1; }
-.cd-spin  { z-index: 2; opacity: 0; }
-
-details:hover .cd-wrapper,
-details[open] .cd-wrapper {
-  transform: scale(1.2);
-}
-
-details:hover .cd-spin,
-details[open] .cd-spin {
+.cd-still {
+  z-index: 1;
   opacity: 1;
 }
-details:hover .cd-still,
-details[open] .cd-still {
+.cd-spin {
+  z-index: 2;
   opacity: 0;
 }
 
-summary::-webkit-details-marker,
-summary::marker {
-  display: none;
+/* Hover to show spin */
+.cd-wrapper:hover .cd-spin {
+  opacity: 1;
+}
+.cd-wrapper:hover .cd-still {
+  opacity: 0;
 }
 
-/* hide all players by default */
-.shared-player {
-  display: none;
+/* Now Playing Box */
+#music {
+  position: relative;
+  background: url('https://file.garden/ZRYtsnIP2EXOR4Kw/Site%20Files/musicplayer.png') no-repeat center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  height: 50px;
+  max-width: 305px;
+  border: 1px solid #000000;
+  margin: 2rem auto;
 }
-
-/* only show the iframe in the currently open details */
-details[open] .shared-player {
+#music iframe {
+  position: absolute;
+  top: 0;
+  height: 47px;
+  opacity: 0.0000001;
+  z-index: 0;
+  left: 0;
+}
+#music div {
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  width: 51%;
+  margin: 0 !important;
+}
+#music span {
   display: block;
+  color: #FFFFFF;
+  font-weight: normal;
+  text-align: left;
+  font-size: 12px;
+  width: 240px;
 }
