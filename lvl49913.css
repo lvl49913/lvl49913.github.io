@@ -350,31 +350,35 @@ nav:after {
 
 #music {
   position: relative;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/2048px-CD_icon_test.svg.png') center center no-repeat;
-  background-size: cover;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/2048px-CD_icon_test.svg.png') top left no-repeat;
+  background-size: 100% 100%;
   overflow: hidden;
-
-  height: 90px;
-  width: 90px;
-  border: 2px solid #000;
-  border-radius: 50%; /* makes it a circle */
-  margin: 2rem auto;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000000;
+  border-radius: 50%;
 }
-
 #music iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.00000001;
-  z-index: 1;
-  border-radius: 50%;
-  pointer-events: auto;
-  cursor: pointer;
+  top: 0px;
+  height: 47px;
+  opacity: 0.00000000000000000000000001;
+  z-index: 0;
+  left: 0px;
 }
-
 #music div {
-  display: none; /* hiding the song text for now */
+  position: absolute;
+  top: 10px;
+  left: 55px;
+  width: 51%;
+  margin: 0 !important;
+}
+#music span {
+  display: block;
+  color: #FFFFFF;
+  font-weight: normal;
+  text-align: left;
+  font-size: 12px;
+  width: 240px;
 }
 
