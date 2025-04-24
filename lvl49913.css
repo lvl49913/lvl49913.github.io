@@ -348,7 +348,14 @@ nav:after {
 	border-left: 5px solid #ffbd2e;
 }
 
-#music {
+.cd-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* space between the CDs */
+  margin: 1rem auto;
+}
+
+.music {
   position: relative;
   background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/CD_icon_test.svg/2048px-CD_icon_test.svg.png') top left no-repeat;
   background-size: 100% 100%;
@@ -358,27 +365,19 @@ nav:after {
   border: 1px solid #000000;
   border-radius: 50%;
 }
-#music iframe {
+
+.music iframe {
   position: absolute;
   top: 0px;
-  height: 47px;
-  opacity: 0.00000000000000000000000001;
-  z-index: 0;
   left: 0px;
+  height: 47px;
+  width: 50px;
+  opacity: 0.01;
+  z-index: 0;
+  border-radius: 50%;
 }
-#music div {
-  position: absolute;
-  top: 10px;
-  left: 55px;
-  width: 51%;
-  margin: 0 !important;
-}
-#music span {
-  display: block;
-  color: #FFFFFF;
-  font-weight: normal;
-  text-align: left;
-  font-size: 12px;
-  width: 240px;
+
+.music div {
+  display: none;
 }
 
